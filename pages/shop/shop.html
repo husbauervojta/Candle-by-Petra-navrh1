@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Candles by Petra</title>
+  <meta name="description" content="Browse our collection of handcrafted luxury candles made in Cyprus.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="../../index.html">
+      <img src="../../images/logo.png" alt="Candles by Petra">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="0" y1="1" x2="22" y2="1"/><line x1="0" y1="8" x2="22" y2="8"/><line x1="0" y1="15" x2="22" y2="15"/>
+      </svg>
+    </button>
+    <button class="cart-icon-btn" onclick="openCart()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z" />
+      </svg>
+      <span class="cart-badge">0</span>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="nav-mobile-menu">
+    <button class="nav-mobile-close" onclick="toggleMobileMenu()">&times;</button>
+    <a href="../../index.html">Home</a>
+    <a href="shop.html" class="active">Shop</a>
+    <a href="../about/about.html">About</a>
+    <a href="../contact/contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="section-label">The Collection</span>
+    <h1>Our <em>Candles</em></h1>
+    <p>Each scent is a story. Find the one that speaks to you.</p>
+  </div>
+
+  <!-- SHOP GRID -->
+  <section class="shop-section">
+    <div class="shop-grid">
+
+      <div class="product-card card reveal" data-name="Matcha Candle" data-price="15.57">
+        <div class="product-image">
+          <img src="../../images/matcha.jpeg" alt="Matcha Candle" onclick="openLightbox(this)">
+          <div class="flame"></div>
+        </div>
+        <div class="product-card-body">
+          <div class="origin-badge">
+            <div class="origin-dot"></div>
+            <span class="origin-label">Tea gardens · Troodos</span>
+          </div>
+          <p class="product-name">Matcha Candle</p>
+          <p class="product-scent">Just Green!</p>
+          <p class="product-price">$15.57</p>
+          <button class="btn-pill btn-pill-dark" onclick="addToCartFromCard(this)">
+            Add to Cart
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card card reveal" data-name="Design Coffee Soy Candle" data-price="19.42">
+        <div class="product-image">
+          <img src="../../images/Teddy cappuccino.jpeg" alt="Design Coffee Soy Candle" onclick="openLightbox(this)">
+          <div class="flame"></div>
+        </div>
+        <div class="product-card-body">
+          <div class="origin-badge">
+            <div class="origin-dot"></div>
+            <span class="origin-label">Morning light · Larnaca</span>
+          </div>
+          <p class="product-name">Design Coffee Soy Candle</p>
+          <p class="product-scent">Teddy Cappuccino</p>
+          <p class="product-price">$19.42</p>
+          <button class="btn-pill btn-pill-dark" onclick="addToCartFromCard(this)">
+            Add to Cart
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card card reveal" data-name="Teddy Berry" data-price="19.42">
+        <div class="product-image">
+          <img src="../../images/Teddy Berry.jpeg" alt="Teddy Berry" onclick="openLightbox(this)">
+          <div class="flame"></div>
+        </div>
+        <div class="product-card-body">
+          <div class="origin-badge">
+            <div class="origin-dot"></div>
+            <span class="origin-label">Wild coast · Akamas</span>
+          </div>
+          <p class="product-name">Teddy Berry</p>
+          <p class="product-scent">Design Soya Wax Candle</p>
+          <p class="product-price">$19.42</p>
+          <button class="btn-pill btn-pill-dark" onclick="addToCartFromCard(this)">
+            Add to Cart
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card card reveal" data-name="Cherry Kiss" data-price="18.20">
+        <div class="product-image">
+          <img src="../../images/Cherry Kiss-web photo.jpeg" alt="Cherry Kiss" onclick="openLightbox(this)">
+          <div class="flame"></div>
+        </div>
+        <div class="product-card-body">
+          <div class="origin-badge">
+            <div class="origin-dot"></div>
+            <span class="origin-label">Cherry blossoms · Troodos</span>
+          </div>
+          <p class="product-name">Cherry Kiss</p>
+          <p class="product-scent">Scented Soy Wax · Floral Topper · Hand Poured · 170g</p>
+          <p class="product-price">$18.20</p>
+          <button class="btn-pill btn-pill-dark" onclick="addToCartFromCard(this)">
+            Add to Cart
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card card reveal" data-name="Lavender Soy Candle" data-price="18.20">
+        <div class="product-image">
+          <img src="../../images/levander.jpeg" alt="Lavender Soy Candle" onclick="openLightbox(this)">
+          <div class="flame"></div>
+        </div>
+        <div class="product-card-body">
+          <div class="origin-badge">
+            <div class="origin-dot"></div>
+            <span class="origin-label">Lavender fields · Platres</span>
+          </div>
+          <p class="product-name">Lavender Soy Candle</p>
+          <p class="product-scent">Handmade Floral Candle</p>
+          <p class="product-price">$18.20</p>
+          <button class="btn-pill btn-pill-dark" onclick="addToCartFromCard(this)">
+            Add to Cart
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card card reveal" data-name="Citrus Bloom Gardenia" data-price="13.35">
+        <div class="product-image">
+          <img src="../../images/citrus bloom.jpeg" alt="Citrus Bloom Gardenia" onclick="openLightbox(this)">
+          <div class="flame"></div>
+        </div>
+        <div class="product-card-body">
+          <div class="origin-badge">
+            <div class="origin-dot"></div>
+            <span class="origin-label">Citrus groves · Mesaoria</span>
+          </div>
+          <p class="product-name">Citrus Bloom Gardenia</p>
+          <p class="product-scent">Grapefruit · Gardenia · Hand-Poured Floral</p>
+          <p class="product-price">$13.35</p>
+          <button class="btn-pill btn-pill-dark" onclick="addToCartFromCard(this)">
+            Add to Cart
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW TO ORDER -->
+  <section class="how-order-section">
+    <span class="section-label">Simple process</span>
+    <h2>How to <em>order</em></h2>
+    <div class="how-order-steps">
+      <div class="how-order-step">
+        <div class="how-order-num">1</div>
+        <h4>Add to cart</h4>
+        <p>Browse the collection and add your favourite candles to the cart.</p>
+      </div>
+      <div class="how-order-step">
+        <div class="how-order-num">2</div>
+        <h4>Receive payment email</h4>
+        <p>After placing your order you'll receive an email with bank transfer details, the total amount, and a unique reference number.</p>
+      </div>
+      <div class="how-order-step">
+        <div class="how-order-num">3</div>
+        <h4>Pay by bank transfer</h4>
+        <p>Transfer the amount within 5 business days using the reference number so we can match your payment.</p>
+      </div>
+      <div class="how-order-step">
+        <div class="how-order-num">4</div>
+        <h4>Your package is on its way</h4>
+        <p>Once payment is confirmed we prepare your candles and send a shipping confirmation email.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <a class="footer-logo" href="../../index.html"><img src="../../images/logo.png" alt="Candles by Petra" style="height:38px;width:auto;"></a>
+      <p>Handcrafted luxury candles made in Larnaca, Cyprus. Small batches, natural ingredients, pure intention.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Cyprus, Larnaca</p>
+      <p>petra@candlesbyPetra.com</p>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Candles by Petra. All rights reserved.</span>
+    <span>Made with love in Cyprus</span>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div id="cart-overlay" onclick="closeCart()"></div>
+  <div id="cart-drawer">
+
+    <!-- STEP 1: Cart items -->
+    <div id="cart-step-1">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-header-close" onclick="closeCart()">&times;</button>
+      </div>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn-checkout" onclick="showCheckoutStep()">Proceed to Checkout</button>
+        <p class="cart-note">Free shipping within Cyprus · Worldwide shipping available</p>
+      </div>
+    </div>
+
+    <!-- STEP 2: Checkout form -->
+    <div id="cart-step-2" style="display:none;">
+      <div class="checkout-header">
+        <button class="checkout-back-btn" onclick="showCartStep()">&#8592;</button>
+        <h3>Delivery Details</h3>
+      </div>
+      <div class="checkout-body">
+        <div id="checkout-summary"></div>
+        <form id="checkout-form">
+          <div class="checkout-form-row">
+            <div class="checkout-field">
+              <label for="co-first-name">First name</label>
+              <input type="text" id="co-first-name" name="first-name" placeholder="Jane" required>
+            </div>
+            <div class="checkout-field">
+              <label for="co-last-name">Last name</label>
+              <input type="text" id="co-last-name" name="last-name" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="checkout-field">
+            <label for="co-email">Email address</label>
+            <input type="email" id="co-email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="checkout-field">
+            <label for="co-phone">Phone number</label>
+            <input type="tel" id="co-phone" name="phone" placeholder="+357 99 000 000">
+          </div>
+          <div class="checkout-field">
+            <label for="co-address">Delivery address</label>
+            <textarea id="co-address" name="address" placeholder="Street, city, postal code, country" required></textarea>
+          </div>
+          <button type="submit" class="checkout-submit">Place Order</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <button id="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    let mobileMenuScrollY = 0;
+    function toggleMobileMenu(){
+      const menu = document.getElementById('mobile-menu');
+      const isOpen = menu.classList.toggle('open');
+      if (isOpen) {
+        mobileMenuScrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = -mobileMenuScrollY + 'px';
+        document.body.style.width = '100%';
+      } else {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, mobileMenuScrollY);
+      }
+    }
+  </script>
+  <script src="../../js/cart.js"></script>
+  <script>
+    loadStock(function(stock) {
+      document.querySelectorAll('.product-card').forEach(function(card) {
+        if (stock[card.dataset.name] === 0) {
+          const btn = card.querySelector('.btn-pill');
+          if (btn) { btn.textContent = 'Sold out for now'; btn.disabled = true; btn.style.opacity = '0.5'; btn.style.cursor = 'not-allowed'; }
+        }
+      });
+    });
+
+    (function scrollReveal() {
+      const items = document.querySelectorAll('.reveal');
+      items.forEach(function(el, i) { el.style.transitionDelay = (i % 3) * 0.08 + 's'; });
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      items.forEach(function(el) { observer.observe(el); });
+    })();
+
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

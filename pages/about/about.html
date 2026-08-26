@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Candles by Petra</title>
+  <meta name="description" content="The story behind Candles by Petra — handcrafted luxury candles made in Cyprus.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="../../index.html">
+      <img src="../../images/logo.png" alt="Candles by Petra">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../shop/shop.html">Shop</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="0" y1="1" x2="22" y2="1"/><line x1="0" y1="8" x2="22" y2="8"/><line x1="0" y1="15" x2="22" y2="15"/>
+      </svg>
+    </button>
+    <button class="cart-icon-btn" onclick="window.location.href='../shop/shop.html'">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z" />
+      </svg>
+      <span class="cart-badge" id="about-badge"></span>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="nav-mobile-menu">
+    <button class="nav-mobile-close" onclick="toggleMobileMenu()">&times;</button>
+    <a href="../../index.html">Home</a>
+    <a href="../shop/shop.html">Shop</a>
+    <a href="about.html" class="active">About</a>
+    <a href="../contact/contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="watermark-text">Petra</span>
+    <span class="section-label">My Story</span>
+    <h1>About <em>Petra</em></h1>
+    <p>From the Mediterranean coast to your home: a story of passion, craft, and scent.</p>
+  </div>
+
+  <!-- STORY SECTION -->
+  <section class="about-story">
+    <div class="about-story-image">
+      <img src="../../images/levander2.jpeg" alt="Petra crafting candles">
+    </div>
+    <div class="about-story-content">
+      <span class="section-label">How it began</span>
+      <h2>A passion born in Cyprus</h2>
+      <p>
+        It started as a quiet obsession. I was looking for a candle that truly captured the scent of a Cypriot summer evening: the dry warmth, the jasmine, the salt in the air. When I couldn't find it, I decided to make it myself.
+      </p>
+      <p>
+        What began as a personal project in my kitchen slowly grew into something much bigger. Friends wanted them. Then strangers. And with each candle I poured, I fell deeper in love with the craft.
+      </p>
+      <p>
+        Today, every Candles by Petra candle is still made by hand in my studio in Larnaca, in small batches, with the same attention to detail as the very first one I ever made.
+      </p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <p class="testimonial-quote">"Every candle feels like it was poured with real care. The scents are nothing like the mass-produced ones. My home hasn't smelled this good in years."</p>
+    <p class="testimonial-author">[Customer name], Cyprus</p>
+  </section>
+
+  <!-- VALUES -->
+  <section class="about-values">
+    <span class="section-label">What I believe in</span>
+    <h2>The principles behind every candle</h2>
+
+    <div class="values-grid">
+      <div class="value-item card">
+        <div class="origin-dot"></div>
+        <h3>Natural Ingredients</h3>
+        <p>I use only natural soy wax, cotton wicks, and premium fragrance oils. No paraffin, no compromise.</p>
+      </div>
+      <div class="value-item card">
+        <div class="origin-dot"></div>
+        <h3>Small Batches</h3>
+        <p>Every candle is poured in small batches to ensure consistent quality and the personal touch that mass production can never replicate.</p>
+      </div>
+      <div class="value-item card">
+        <div class="origin-dot"></div>
+        <h3>Slow & Intentional</h3>
+        <p>I never rush. Each scent is developed over weeks, tested, and refined until it feels exactly right.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <a class="footer-logo" href="../../index.html"><img src="../../images/logo.png" alt="Candles by Petra" style="height:38px;width:auto;"></a>
+      <p>Handcrafted luxury candles made in Larnaca, Cyprus. Small batches, natural ingredients, pure intention.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../shop/shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Cyprus, Larnaca</p>
+      <p>petra@candlesbyPetra.com</p>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Candles by Petra. All rights reserved.</span>
+    <span>Made with love in Cyprus</span>
+  </div>
+
+  <script>
+    let mobileMenuScrollY = 0;
+    function toggleMobileMenu(){
+      const menu = document.getElementById('mobile-menu');
+      const isOpen = menu.classList.toggle('open');
+      if (isOpen) {
+        mobileMenuScrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = -mobileMenuScrollY + 'px';
+        document.body.style.width = '100%';
+      } else {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, mobileMenuScrollY);
+      }
+    }
+    const count = JSON.parse(localStorage.getItem('cbp_cart') || '[]').reduce((s,i) => s + i.qty, 0);
+    const badge = document.getElementById('about-badge');
+    if (count > 0) { badge.textContent = count; badge.style.display = 'flex'; }
+  </script>
+</body>
+</html>
