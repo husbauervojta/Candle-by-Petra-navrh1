@@ -119,10 +119,11 @@
       min-height:92vh; padding-top:76px;
     }
     .hero-content {
-      position:relative; z-index:2;
+      position:relative; z-index:2; overflow:hidden;
       display:flex; flex-direction:column; justify-content:center;
       padding:3rem 4rem 3rem 6rem;
     }
+    .hero-content > * { position:relative; z-index:1; }
     .hero-content .origin-badge { margin-bottom:1.6rem; }
     .hero-title { font-size:clamp(2.8rem,5vw,5.2rem); font-weight:300; line-height:1.08; margin-bottom:1.5rem; }
     .hero-title em { font-style:italic; color:var(--gold); }
@@ -164,12 +165,35 @@
     .about-teaser-content p { color:rgba(255,255,255,.62); max-width:420px; margin-bottom:2.5rem; }
 
     /* ── TESTIMONIAL ── */
-    .testimonial-section { padding:6rem; text-align:center; background:var(--cream); }
+    .testimonial-section { position:relative; overflow:hidden; padding:6rem; text-align:center; background:var(--cream); }
     .testimonial-quote {
+      position:relative; z-index:1;
       font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400;
       font-size:clamp(1.5rem,2.6vw,2.3rem); line-height:1.55; max-width:760px; margin:0 auto 1.5rem; color:var(--dark);
     }
-    .testimonial-author { font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); }
+    .testimonial-author { position:relative; z-index:1; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); }
+
+    /* ── BOTANICAL MOTIFS (decorative line art) ── */
+    .motif-olive::before,
+    .motif-lavender::before {
+      content:''; position:absolute; width:320px; height:640px;
+      background-repeat:no-repeat; background-size:contain;
+      opacity:.3; pointer-events:none; z-index:0;
+    }
+    .motif-olive::before {
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 400'%3E%3Cpath d='M100,395 C90,320 108,260 96,200 C86,150 106,90 100,20' fill='none' stroke='%23c9a96e' stroke-width='2.6'/%3E%3Cg fill='none' stroke='%23c9a96e' stroke-width='2.2'%3E%3Cellipse cx='118' cy='350' rx='22' ry='8' transform='rotate(-30 118 350)'/%3E%3Cellipse cx='80' cy='330' rx='22' ry='8' transform='rotate(35 80 330)'/%3E%3Cellipse cx='120' cy='290' rx='22' ry='8' transform='rotate(-28 120 290)'/%3E%3Cellipse cx='78' cy='265' rx='22' ry='8' transform='rotate(32 78 265)'/%3E%3Cellipse cx='114' cy='230' rx='21' ry='8' transform='rotate(-25 114 230)'/%3E%3Cellipse cx='82' cy='200' rx='21' ry='8' transform='rotate(30 82 200)'/%3E%3Cellipse cx='108' cy='165' rx='20' ry='7' transform='rotate(-22 108 165)'/%3E%3Cellipse cx='86' cy='135' rx='20' ry='7' transform='rotate(26 86 135)'/%3E%3Cellipse cx='104' cy='100' rx='19' ry='7' transform='rotate(-20 104 100)'/%3E%3Cellipse cx='90' cy='70' rx='18' ry='7' transform='rotate(22 90 70)'/%3E%3Cellipse cx='100' cy='40' rx='16' ry='6' transform='rotate(-15 100 40)'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .motif-lavender::before {
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 400'%3E%3Cpath d='M100,395 L100,140' fill='none' stroke='%23c9a96e' stroke-width='2.6'/%3E%3Cpath d='M100,340 C70,335 55,315 60,290' fill='none' stroke='%23c9a96e' stroke-width='2'/%3E%3Cpath d='M100,300 C130,295 145,275 140,250' fill='none' stroke='%23c9a96e' stroke-width='2'/%3E%3Cg fill='none' stroke='%23c9a96e' stroke-width='2'%3E%3Cellipse cx='100' cy='130' rx='10' ry='15'/%3E%3Cellipse cx='84' cy='118' rx='10' ry='15' transform='rotate(-18 84 118)'/%3E%3Cellipse cx='116' cy='118' rx='10' ry='15' transform='rotate(18 116 118)'/%3E%3Cellipse cx='92' cy='100' rx='10' ry='15' transform='rotate(-12 92 100)'/%3E%3Cellipse cx='108' cy='100' rx='10' ry='15' transform='rotate(12 108 100)'/%3E%3Cellipse cx='100' cy='80' rx='9' ry='14'/%3E%3Cellipse cx='86' cy='68' rx='9' ry='13' transform='rotate(-15 86 68)'/%3E%3Cellipse cx='114' cy='68' rx='9' ry='13' transform='rotate(15 114 68)'/%3E%3Cellipse cx='100' cy='45' rx='8' ry='12'/%3E%3Cellipse cx='100' cy='18' rx='7' ry='10'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-content.motif-lavender::before { width:220px; height:440px; bottom:-40px; left:-30px; transform:rotate(-6deg); }
+    .testimonial-section.motif-olive::before { top:10px; right:4%; transform:rotate(12deg); opacity:.22; }
+    @media (max-width:700px) {
+      .motif-olive::before, .motif-lavender::before { width:200px; height:400px; opacity:.18; }
+    }
+    @media (max-width:480px) {
+      .motif-olive::before, .motif-lavender::before { display:none; }
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -268,7 +292,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content motif-lavender">
       <div class="origin-badge">
         <div class="origin-dot"></div>
         <span class="origin-label">Handcrafted &middot; Larnaca, Cyprus</span>
@@ -298,33 +322,6 @@
 
     <div class="products-grid">
       <div class="product-card card">
-        <div class="product-image"><img src="images/matcha.jpg" alt="Matcha Candle"></div>
-        <div class="product-card-body">
-          <div class="origin-badge"><div class="origin-dot"></div><span class="origin-label">Tea gardens &middot; Troodos</span></div>
-          <p class="product-name">Matcha Candle</p>
-          <p class="product-scent">Just Green! &middot; Soy Wax</p>
-          <p class="product-price">$15.57</p>
-        </div>
-      </div>
-      <div class="product-card card">
-        <div class="product-image"><img src="images/coffee.jpg" alt="Design Coffee Soy Candle"></div>
-        <div class="product-card-body">
-          <div class="origin-badge"><div class="origin-dot"></div><span class="origin-label">Morning light &middot; Larnaca</span></div>
-          <p class="product-name">Design Coffee Soy Candle</p>
-          <p class="product-scent">Teddy Cappuccino</p>
-          <p class="product-price">$19.42</p>
-        </div>
-      </div>
-      <div class="product-card card">
-        <div class="product-image"><img src="images/berry.jpg" alt="Teddy Berry"></div>
-        <div class="product-card-body">
-          <div class="origin-badge"><div class="origin-dot"></div><span class="origin-label">Wild coast &middot; Akamas</span></div>
-          <p class="product-name">Teddy Berry</p>
-          <p class="product-scent">Design Soya Wax Candle</p>
-          <p class="product-price">$19.42</p>
-        </div>
-      </div>
-      <div class="product-card card">
         <div class="product-image"><img src="images/cherry.jpg" alt="Cherry Kiss"></div>
         <div class="product-card-body">
           <div class="origin-badge"><div class="origin-dot"></div><span class="origin-label">Cherry blossoms &middot; Troodos</span></div>
@@ -340,15 +337,6 @@
           <p class="product-name">Lavender Soy Candle</p>
           <p class="product-scent">Handmade Floral Candle</p>
           <p class="product-price">$18.20</p>
-        </div>
-      </div>
-      <div class="product-card card">
-        <div class="product-image"><img src="images/citrus.jpg" alt="Citrus Bloom Gardenia"></div>
-        <div class="product-card-body">
-          <div class="origin-badge"><div class="origin-dot"></div><span class="origin-label">Citrus groves &middot; Mesaoria</span></div>
-          <p class="product-name">Citrus Bloom Gardenia</p>
-          <p class="product-scent">Grapefruit &middot; Gardenia</p>
-          <p class="product-price">$13.35</p>
         </div>
       </div>
     </div>
@@ -377,9 +365,9 @@
   </section>
 
   <!-- TESTIMONIAL -->
-  <section class="testimonial-section">
-    <p class="testimonial-quote">"Every candle feels like it was poured with real care. The scents are nothing like the mass-produced ones. My home hasn't smelled this good in years."</p>
-    <p class="testimonial-author">[Customer name], Cyprus</p>
+  <section class="testimonial-section motif-olive">
+    <p class="testimonial-quote">"The candles from Candles by Petra? Even the craftsmanship alone amazed me. I bought several the very first time: a few for myself, since I love a nicely scented home, and the rest to share with family and friends. And the result? Everyone was thrilled. They're beautiful decorations, almost a shame to light them, and they really fill the room with scent, burn for a long time, and I never have to worry whether they're safe to have at home. For your own home? Absolutely. As a gift? Perfect."</p>
+    <p class="testimonial-author">Sylvi, Czech expat in Cyprus</p>
   </section>
 
   <!-- FOOTER -->
